@@ -5,7 +5,7 @@ var
   zero,a,b,c,d,e: integer;
   g,h,i: real;
 
-begin
+begin 
 textcolor(11);
 zeroz := 0;
 one := 1;
@@ -19,7 +19,7 @@ writeln('1) Сумма');
 writeln('2) Вычитание');
 writeln('3) Умножение');
 writeln('4) Деление');
-writeln('5) Дополнительные настройки');
+writeln('5) Дополнительные операции');
 writeln('Выберите процедуру, указав нужное число:');
 readln(onefirst);
 if onefirst = one then
@@ -35,21 +35,30 @@ ClrScr;
     writeln('Введите значение B:');
     readln(b);
     writeln('Сумма A + B = ', a+b);
-    writeln('1 - выполнить еще операции, 0 - выход.');
-    readln(zero);
-    if zero = one then
+    writeln('Перезагрузите программу, чтобы выполнить еще операции.');
+    end;
+
+    if zero = three then
+    begin
     ClrScr;
-    if zero = zeroz then
-    exit
+    writeln('Введите значение A:');
+    readln(a);
+    writeln('Введите значение B:');
+    readln(b);
+    writeln('Введите значение C:');
+    readln(c);
+    writeln('Сумма A + B + C = ', a+b+c);
+    writeln('Перезагрузите программу, чтобы выполнить еще операции.');
     end
+
+
 
 end;
 if onefirst = five then
   begin
   ClrScr;
-  writeln('1) Заменить знак деления (:) на "/"');
-  writeln('2) Добавить возведение в степень');
-  writeln('3) Извлечение квадратного корня');
+  writeln('1) Возведение в степень');
+  writeln('2) Извлечение квадратного корня');
   writeln('Выберите процедуру, указав нужное число:');
   readln(twofirst);
   end;
