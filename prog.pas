@@ -1,9 +1,9 @@
-program calc;
+﻿program calc;
 uses crt;
 var 
   zeroz,one,two,three,four,five,onefirst,twofirst,threefirst,fourfirst,fivefirst,result1: integer;
   zero,a,b,c,d,e: integer;
-  g,h,i: real;
+  g,h,i,x1,x2: real;
 
 begin 
 textcolor(11);
@@ -93,5 +93,22 @@ if onefirst = five then
   writeln('2) Извлечение квадратного корня');
   writeln('Выберите процедуру, указав нужное число:');
   readln(twofirst);
+  if twofirst = two then
+    begin
+    ClrScr;
+    writeln('Введите "A, B, C" у квадратного уравнения.');
+    readln(a);
+    readln(b);
+    readln(c);
+    d:=b*b-4*a*c;
+    x1:=(-b+sqrt(d))/(2*a);
+    x2:=(-b-sqrt(d))/(2*a);
+    writeln('Считаем... 24%');
+    writeln('Считаем... 76%');
+    writeln('Считаем... 92%');
+    writeln('Готово! x1 = ', x1,' x2 = ', x2);
+    writeln('Если x1 или x2 = NaN, значит или корней нет, или возникла ошибка.');
+    writeln('Перезагрузите программу, чтобы выполнить другие операции.');
+    end;
   end;
 end.
